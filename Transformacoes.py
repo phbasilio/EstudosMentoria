@@ -6,6 +6,7 @@ def ajustar_dt(df):
     df['data_pregao'] = pd.to_datetime(df['data_pregao'], format='%Y%m%d')
 
     return df
+#Fim Formatar Data
 
 #Formtar campos númericos
 def ajustar_valores(df, coluna):
@@ -13,6 +14,7 @@ def ajustar_valores(df, coluna):
     df[coluna] = (df[coluna]/100).astype(float)
 
     return df[coluna]
+#Fim Formatar campos númericos
 
     #df['Preço_Abertura'] = (df['Preço_Abertura']/100).astype(float)
     #df['Preço_Máximo'] = (df['Preço_Máximo']/100).astype(float)
