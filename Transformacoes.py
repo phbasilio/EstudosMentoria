@@ -1,13 +1,13 @@
 import pandas as pd
 
-
+#Formtar o campo de data
 def ajustar_dt(df):
 
     df['data_pregao'] = pd.to_datetime(df['data_pregao'], format='%Y%m%d')
 
     return df
 
-
+#Formtar campos númericos
 def ajustar_valores(df, coluna):
 
     df[coluna] = (df[coluna]/100).astype(float)
